@@ -6,12 +6,12 @@ import java.util.Set;
 
 public class Main implements Runnable{
     static Thread mainThread = new Thread(new Main());
+    public static boolean isInterrupted = false;
 
     public static void main(String[] args) {
 
         String sourceFile = args[0];
         String outputFile = args[1];
-
 
         mainThread.start();
 
@@ -26,7 +26,7 @@ public class Main implements Runnable{
         while (true) {
             try {
                 if (System.in.read() == 'q') {
-                    mainThread.interrupt();
+                    isInterrupted = true;
                     System.out.println("break");
                     break;
                 }

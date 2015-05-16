@@ -1,3 +1,9 @@
 D:\IdeaProjects\CountFilesApp\src
 D:\Документы
 D:\Загрузки
+D:\SQLiteStudio
+D:\Oracle
+D:\MATLAB R2009a Portable
+D:\JavaProgrammingEclipse
+D:\IdeaProjects
+D:\Android

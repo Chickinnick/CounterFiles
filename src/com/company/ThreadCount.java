@@ -18,6 +18,7 @@ public class ThreadCount implements Callable<ResultOfCounting>{
     }
 
     public ResultOfCounting countItems(File item,ResultOfCounting resultOfCounting){
+        if(!Main.isInterrupted)
         for (File f : item.listFiles()) {
             resultOfCounting.incrementNumberOfFiles();
             if (f.isDirectory())
