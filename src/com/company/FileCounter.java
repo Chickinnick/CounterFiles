@@ -14,7 +14,6 @@ public class FileCounter {
 
     public static Set<File> readFromFile(File file) {
         Set<File> directories = new LinkedHashSet<>();
-
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
@@ -45,7 +44,6 @@ public class FileCounter {
         }
     }
     public static void countAllElements(Set<File> set) {
-        Set<ThreadCount> threads = new TreeSet<>();
         for (File item : set) {
             try {
                 results.add(new ThreadCount(item, new ResultOfCounting(item.getAbsolutePath())).call());
