@@ -13,10 +13,6 @@ public class ResultOfCounting {
         numberOfFiles++;
     }
 
-    public void setDirectory(String directory) {
-        this.directory = directory;
-    }
-
     public int getNumberOfFiles() {
         return numberOfFiles;
     }

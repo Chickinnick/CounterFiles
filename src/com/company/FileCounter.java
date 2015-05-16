@@ -58,4 +58,5 @@ public class FileCounter {
         Formatter formatter = new Formatter();
         System.out.println(formatter.format("|%5d|%5d|%40s|", ++sequenceNomber, resultOfCounting.getNumberOfFiles(), resultOfCounting.getDirectory()));
     }
+
 }
