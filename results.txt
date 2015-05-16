@@ -1,0 +1,3 @@
+D:\IdeaProjects\CountFilesApp\src;5
+D:\Документы;3410
+D:\Загрузки;6058
