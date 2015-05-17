@@ -1,10 +1,12 @@
 package com.company;
 
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
-public class Main implements Runnable{
+public class Main implements Runnable {
+
     static Thread mainThread = new Thread(new Main());
     public static boolean isInterrupted = false;
 

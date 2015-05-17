@@ -3,7 +3,8 @@ package com.company;
 import java.io.File;
 import java.util.concurrent.Callable;
 
-public class ThreadCount implements Callable<ResultOfCounting>{
+public class ThreadCount implements Callable<ResultOfCounting> {
+
     File item;
     ResultOfCounting resultOfCounting;
 
@@ -17,13 +18,13 @@ public class ThreadCount implements Callable<ResultOfCounting>{
         return countItems(item, resultOfCounting);
     }
 
-    public ResultOfCounting countItems(File item,ResultOfCounting resultOfCounting){
-        if(!Main.isInterrupted)
-        for (File f : item.listFiles()) {
-            resultOfCounting.incrementNumberOfFiles();
-            if (f.isDirectory())
-                countItems(f, resultOfCounting);
-        }
+    public ResultOfCounting countItems(File item, ResultOfCounting resultOfCounting) {
+        if (!Main.isInterrupted)
+            for (File f : item.listFiles()) {
+                resultOfCounting.incrementNumberOfFiles();
+                if (f.isDirectory())
+                    countItems(f, resultOfCounting);
+            }
         return resultOfCounting;
     }
 }

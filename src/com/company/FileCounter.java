@@ -25,6 +25,7 @@ public class FileCounter {
         }
         return directories;
     }
+
     public static synchronized void writeToFile(String outputFile) {
         FileWriter fileWriter = null;
         try {
@@ -37,12 +38,15 @@ public class FileCounter {
             e.printStackTrace();
         } finally {
             try {
-                fileWriter.close();
+                if (fileWriter != null) {
+                    fileWriter.close();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+
     public static void countAllElements(Set<File> set) {
         for (File item : set) {
             try {
@@ -51,7 +55,6 @@ public class FileCounter {
                 e.printStackTrace();
             }
         }
-        logger.log(Level.INFO, "end of count all");
     }
 
     public static void displayResults(ResultOfCounting resultOfCounting) {
